@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Release notes and changelog for the Netflix Speed Controller browser extension.">
+  <link rel="icon" type="image/png" href="icon128.png">
+  <title>What's New - Netflix Speed Controller</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="icon128.png" alt="" width="34" height="34">
+        </span>
+        <span class="brand-text">Netflix Speed Controller</span>
+      </a>
+      <nav class="header-nav" aria-label="Version navigation">
+        <a href="#v1-1-1" class="nav-link nav-current">1.1.1</a>
+        <a href="#v1-1-0" class="nav-link">1.1.0</a>
+        <a href="#v1-0-0" class="nav-link">1.0.0</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container">
+        <p class="hero-eyebrow">Release Notes</p>
+        <h1>What's New</h1>
+        <p class="hero-sub">Keep up with the latest improvements, fixes, and new languages added to the extension.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value" id="statVersions">3</span>
+            <span class="stat-label">Releases</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="statLanguages">60+</span>
+            <span class="stat-label">Languages</span>
+          </div>
+          <div class="stat">
+            <span class="stat-value" id="statSpeed">16x</span>
+            <span class="stat-label">Speed control</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="changelog">
+      <div class="container changelog-inner">
+
+        <aside class="side-nav" aria-label="Versions">
+          <h2 class="side-nav-title">Versions</h2>
+          <a href="#v1-1-1" class="side-link is-current">
+            <span class="side-badge">1.1.1</span>
+            <span class="side-tag">Latest</span>
+          </a>
+          <a href="#v1-1-0" class="side-link">
+            <span class="side-badge">1.1.0</span>
+          </a>
+          <a href="#v1-0-0" class="side-link">
+            <span class="side-badge">1.0.0</span>
+          </a>
+        </aside>
+
+        <div class="entries">
+
+          <article class="release-card release-current" id="v1-1-1">
+            <header class="release-header">
+              <div class="release-version">
+                <h2>Version 1.1.1</h2>
+                <span class="pill pill-latest">Latest</span>
+              </div>
+            </header>
+            <ul class="release-items">
+              <li class="item">
+                <span class="badge badge-fix">Fixed</span>
+                <div class="item-body">
+                  <strong>Netflix navigation</strong> — video detection now keeps watching the full document, so the
+                  controller continues working when Netflix replaces the player during in-app navigation or episode changes.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-perf">Improved</span>
+                <div class="item-body">
+                  <strong>Efficient document monitoring</strong> — retains the video-only mutation filtering and
+                  200&nbsp;ms debounce, avoiding full video scans for unrelated page updates.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Fixed</span>
+                <div class="item-body">
+                  <strong>Accurate player status</strong> — the popup now clearly indicates when a Netflix page has
+                  no active video and disables controls until playback is available.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Fixed</span>
+                <div class="item-body">
+                  <strong>Working default speed</strong> — a new Netflix page now starts at the speed selected in
+                  Settings instead of reusing a stale speed from a previous session.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-perf">Improved</span>
+                <div class="item-body">
+                  <strong>Live overlay settings</strong> — enabling or disabling the on-video controls now takes
+                  effect immediately during playback.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Fixed</span>
+                <div class="item-body">
+                  <strong>Reliable shortcuts after reset</strong> — Reset to Defaults now restores the working
+                  keyboard shortcut format.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-audio">Audio</span>
+                <div class="item-body">
+                  <strong>Natural audio pitch and efficient speed recovery</strong> — custom speeds preserve normal
+                  voice pitch and react to native playback-rate changes without a continuous polling loop.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Reliability</span>
+                <div class="item-body">
+                  <strong>Seek-safe playback recovery</strong> — speed restoration now waits for Netflix to finish
+                  rebuilding media and subtitle timing after a seek, preventing lag and subtitle desynchronization.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-lang">Languages</span>
+                <div class="item-body">
+                  <strong>New languages</strong> — the extension is now available in
+                  <span class="lang-toggle-wrap">
+                    <button class="lang-toggle" type="button" aria-expanded="false" data-lang-toggle="lang-1-1-1">23 new languages</button>
+                  </span>.
+                </div>
+              </li>
+            </ul>
+            <div class="lang-list" id="lang-1-1-1" hidden>
+              <span class="lang-chip" data-lang="Kazakh">Kazakh</span>
+              <span class="lang-chip" data-lang="Kyrgyz">Kyrgyz</span>
+              <span class="lang-chip" data-lang="Tajik">Tajik</span>
+              <span class="lang-chip" data-lang="Mongolian">Mongolian</span>
+              <span class="lang-chip" data-lang="Pashto">Pashto</span>
+              <span class="lang-chip" data-lang="Azerbaijani">Azerbaijani</span>
+              <span class="lang-chip" data-lang="Georgian">Georgian</span>
+              <span class="lang-chip" data-lang="Armenian">Armenian</span>
+              <span class="lang-chip" data-lang="Bashkir">Bashkir</span>
+              <span class="lang-chip" data-lang="Chechen">Chechen</span>
+              <span class="lang-chip" data-lang="Chuvash">Chuvash</span>
+              <span class="lang-chip" data-lang="Ossetian">Ossetian</span>
+              <span class="lang-chip" data-lang="Yakut">Yakut</span>
+              <span class="lang-chip" data-lang="Okinawan">Okinawan</span>
+              <span class="lang-chip" data-lang="Somali">Somali</span>
+              <span class="lang-chip" data-lang="Nepali">Nepali</span>
+              <span class="lang-chip" data-lang="Sinhala">Sinhala</span>
+              <span class="lang-chip" data-lang="Burmese">Burmese</span>
+              <span class="lang-chip" data-lang="Khmer">Khmer</span>
+              <span class="lang-chip" data-lang="Lao">Lao</span>
+              <span class="lang-chip" data-lang="Kurdish">Kurdish</span>
+              <span class="lang-chip" data-lang="Urdu">Urdu</span>
+              <span class="lang-chip" data-lang="Bosnian">Bosnian</span>
+              <span class="lang-chip" data-lang="Afrikaans">Afrikaans</span>
+            </div>
+          </article>
+
+          <article class="release-card" id="v1-1-0">
+            <header class="release-header">
+              <div class="release-version">
+                <h2>Version 1.1.0</h2>
+              </div>
+            </header>
+            <ul class="release-items">
+              <li class="item">
+                <span class="badge badge-perf">Performance</span>
+                <div class="item-body">
+                  <strong>Faster and smoother</strong> — the extension now runs more efficiently so it won't slow down your browsing.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-audio">Audio</span>
+                <div class="item-body">
+                  <strong>Better audio at high speeds</strong> — no more weird sound distortion when watching at 2x, 3x, or faster.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Reliability</span>
+                <div class="item-body">
+                  <strong>More reliable</strong> — speed changes stick better during seeking and buffering.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-perf">Performance</span>
+                <div class="item-body">
+                  <strong>Smaller performance footprint</strong> — uses less CPU and memory while you watch.
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="release-card" id="v1-0-0">
+            <header class="release-header">
+              <div class="release-version">
+                <h2>Version 1.0.0</h2>
+              </div>
+            </header>
+            <ul class="release-items">
+              <li class="item">
+                <span class="badge badge-feature">Release</span>
+                <div class="item-body">
+                  Initial release of Netflix Speed Controller.
+                </div>
+              </li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">Netflix Speed Controller</span>
+      <span class="footer-divider">·</span>
+      <span class="footer-credit">Levent B.</span>
+      <span class="footer-divider">·</span>
+      <span class="footer-copy" id="footerYear">2026</span>
+      <span class="footer-divider">·</span>
+      <span class="footer-copy">All rights reserved.</span>
+      <span class="footer-divider">·</span>
+      <a class="footer-link" href="https://chromewebstore.google.com/detail/netflix-speed-controller/ggengamhoniclfpdefgbibfooflpebcn" target="_blank" rel="noopener noreferrer">Install from Chrome Web Store</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
