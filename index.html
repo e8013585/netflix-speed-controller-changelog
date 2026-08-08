@@ -19,7 +19,8 @@
         <span class="brand-text">Netflix Speed Controller</span>
       </a>
       <nav class="header-nav" aria-label="Version navigation">
-        <a href="#v1-1-1" class="nav-link nav-current">1.1.1</a>
+        <a href="#v1-2-0" class="nav-link nav-current">1.2.0</a>
+        <a href="#v1-1-1" class="nav-link">1.1.1</a>
         <a href="#v1-1-0" class="nav-link">1.1.0</a>
         <a href="#v1-0-0" class="nav-link">1.0.0</a>
       </nav>
@@ -35,11 +36,11 @@
         <p class="hero-sub">Keep up with the latest improvements, fixes, and new languages added to the extension.</p>
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-value" id="statVersions">3</span>
+            <span class="stat-value" id="statVersions">4</span>
             <span class="stat-label">Releases</span>
           </div>
           <div class="stat">
-            <span class="stat-value" id="statLanguages">60+</span>
+            <span class="stat-value" id="statLanguages">78</span>
             <span class="stat-label">Languages</span>
           </div>
           <div class="stat">
@@ -55,9 +56,12 @@
 
         <aside class="side-nav" aria-label="Versions">
           <h2 class="side-nav-title">Versions</h2>
-          <a href="#v1-1-1" class="side-link is-current">
-            <span class="side-badge">1.1.1</span>
+          <a href="#v1-2-0" class="side-link is-current">
+            <span class="side-badge">1.2.0</span>
             <span class="side-tag">Latest</span>
+          </a>
+          <a href="#v1-1-1" class="side-link">
+            <span class="side-badge">1.1.1</span>
           </a>
           <a href="#v1-1-0" class="side-link">
             <span class="side-badge">1.1.0</span>
@@ -69,11 +73,110 @@
 
         <div class="entries">
 
-          <article class="release-card release-current" id="v1-1-1">
+          <article class="release-card release-current" id="v1-2-0">
+            <header class="release-header">
+              <div class="release-version">
+                <h2>Version 1.2.0</h2>
+                <span class="pill pill-latest">Latest</span>
+              </div>
+            </header>
+            <ul class="release-items">
+              <li class="item">
+                <span class="badge badge-perf">New</span>
+                <div class="item-body">
+                  <strong>Remember your speed</strong> — the new <em>Remember Playback Speed</em> setting resumes at
+                  the speed you last used instead of resetting to the default every time.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-perf">New</span>
+                <div class="item-body">
+                  <strong>Per-title speeds</strong> — with <em>Remember Speed Per Title</em> enabled, every show and
+                  movie keeps its own speed, so a documentary at 1.5x doesn't follow you into a film you want at
+                  normal speed. All episodes of a series share one speed.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-lang">Languages</span>
+                <div class="item-body">
+                  <strong>Available in every language</strong> — the new speed-memory settings ship translated in
+                  all 78 supported languages, not just English.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-audio">Audio</span>
+                <div class="item-body">
+                  <strong>Guaranteed natural pitch</strong> — pitch correction is now set explicitly on every speed
+                  change rather than relying on the browser default, so the 1.1.0 audio problem cannot come back.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-lang">Languages</span>
+                <div class="item-body">
+                  <strong>Typing a decimal comma now works</strong> — in the 33 languages that write
+                  <code>1,85</code> rather than <code>1.85</code>, the custom speed box and the quick-speed examples
+                  silently produced the wrong values. Both now work.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-lang">Languages</span>
+                <div class="item-body">
+                  <strong>Fixed missing translation</strong> — the "Open a Netflix video to control speed" status
+                  appeared in English in every language.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-lang">Languages</span>
+                <div class="item-body">
+                  <strong>Fixed Serbian text</strong> — three messages displayed raw <code>__ВАР1__</code> markers
+                  instead of the speed values.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-lang">Languages</span>
+                <div class="item-body">
+                  <strong>Much better Korean</strong> — 16 labels were mistranslated in earlier releases:
+                  &ldquo;Theme&rdquo; read as <em>topic</em>, &ldquo;Light&rdquo; as <em>illumination</em>,
+                  &ldquo;Reset&rdquo; as <em>put down again</em>, and &ldquo;Not on Netflix&rdquo; said the title
+                  was unavailable. All corrected, and the wording now matches Korean interface conventions
+                  throughout.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-perf">Improved</span>
+                <div class="item-body">
+                  <strong>Tidier footers</strong> — the version label has been removed from the popup and Settings
+                  pages, where it could show an out-of-date number.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Fixed</span>
+                <div class="item-body">
+                  <strong>Speed indicator no longer flashes unprompted</strong> — a leftover timer could flash the
+                  overlay after you had already returned to normal speed.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Fixed</span>
+                <div class="item-body">
+                  <strong>Player status after closing a video</strong> — with more than one video on the page,
+                  closing one could leave the popup reporting no active video while playback continued.
+                </div>
+              </li>
+              <li class="item">
+                <span class="badge badge-fix">Fixed</span>
+                <div class="item-body">
+                  <strong>Open tabs survive an update</strong> — updating the extension no longer leaves
+                  already-open Netflix tabs unresponsive until you reload them.
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="release-card" id="v1-1-1">
             <header class="release-header">
               <div class="release-version">
                 <h2>Version 1.1.1</h2>
-                <span class="pill pill-latest">Latest</span>
               </div>
             </header>
             <ul class="release-items">
@@ -203,6 +306,12 @@
                 </div>
               </li>
             </ul>
+            <p class="release-correction">
+              <strong>Correction (added in 1.2.0):</strong> the audio note above was wrong. This release shipped
+              pitch correction switched <em>off</em> rather than on, which is what caused the distorted, high-pitched
+              audio reported after it. 1.1.1 removed the offending code and restored correct audio;
+              <a href="#v1-2-0">1.2.0</a> now sets pitch correction explicitly so it cannot regress again.
+            </p>
           </article>
 
           <article class="release-card" id="v1-0-0">
