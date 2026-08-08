@@ -377,6 +377,26 @@ body {
   color: #fff;
 }
 
+/* Retraction note attached to a past release whose notes were inaccurate. */
+.release-correction {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border-left: 3px solid var(--yellow);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  background: rgba(245, 197, 66, 0.08);
+  color: var(--text-dim);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.release-correction strong {
+  color: var(--yellow);
+}
+
+.release-correction a {
+  color: var(--text);
+}
+
 /* ---------------- Language chips ---------------- */
 
 .lang-toggle {
